@@ -35,9 +35,9 @@ const LeadsInbox = () => {
           {leads.map((lead, idx) => (
              <div key={idx} className="glass-panel-dark animate-fade-in" style={{ 
                 padding: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                borderLeft: \`3px solid \${getStatusColor(lead.status)}\`,
+                borderLeft: `3px solid ${getStatusColor(lead.status)}`,
                 background: 'var(--bg-obsidian-light)', transition: 'transform 0.2s',
-                animationDelay: \`\${idx * 100}ms\`
+                animationDelay: `${idx * 100}ms`
              }}
              onMouseOver={(e) => e.currentTarget.style.transform = 'translateX(5px)'}
              onMouseOut={(e) => e.currentTarget.style.transform = 'translateX(0)'}
@@ -68,7 +68,7 @@ const LeadsInbox = () => {
                       padding: '0.5rem 1rem', fontSize: '0.75rem', border: '1px solid',
                       borderRadius: 'var(--radius-sharp)', textTransform: 'uppercase', letterSpacing: '0.05em',
                       borderColor: getStatusColor(lead.status), color: getStatusColor(lead.status),
-                      background: \`\${getStatusColor(lead.status)}10\` // 10% opacity via hex fallback approx
+                      background: `${getStatusColor(lead.status)}10` // 10% opacity via hex fallback approx
                    }}>
                       {lead.status}
                    </span>
